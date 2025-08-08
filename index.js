@@ -16,7 +16,11 @@ console.log('📂 Backend path:', backendPath);
 const child = spawn('node', [backendPath], {
   stdio: 'inherit',
   cwd: path.join(__dirname, 'backend'),
-  env: { ...process.env, NODE_ENV: process.env.NODE_ENV || 'production' }
+  env: { 
+    ...process.env, 
+    NODE_ENV: process.env.NODE_ENV || 'production',
+    PORT: process.env.PORT || '10000'  // Use Render's PORT or default to 10000
+  }
 });
 
 child.on('error', (error) => {
