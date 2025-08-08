@@ -3,6 +3,7 @@ services:
     name: influencore-backend
     env: node
     plan: free
+
     buildCommand: npm install --legacy-peer-deps
     startCommand: npm start
     envVars:

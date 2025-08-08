@@ -52,3 +52,9 @@
 {"level":"info","message":"::1 - - [07/Aug/2025:19:30:29 +0000] \"GET /api/video-models HTTP/1.1\" 404 155 \"http://localhost:5173/advanced-video\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\"","timestamp":"2025-08-07T19:30:29.524Z"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [07/Aug/2025:19:31:16 +0000] \"POST /api/generate-veo3-video HTTP/1.1\" 404 163 \"http://localhost:5173/advanced-video\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\"","timestamp":"2025-08-07T19:31:16.738Z"}
 {"level":"info","message":"::1 - - [07/Aug/2025:19:31:19 +0000] \"POST /api/generate-veo3-video HTTP/1.1\" 404 163 \"http://localhost:5173/advanced-video\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\"","timestamp":"2025-08-07T19:31:19.589Z"}
+{"level":"info","message":"🚀 Influencore server running on port 3000","timestamp":"2025-08-08T17:01:54.495Z"}
+{"level":"info","message":"📊 Environment: production","timestamp":"2025-08-08T17:01:54.496Z"}
+{"level":"info","message":"🔗 Frontend URL: https://yourdomain.com","timestamp":"2025-08-08T17:01:54.497Z"}
+{"level":"info","message":"💳 Stripe: Configured","timestamp":"2025-08-08T17:01:54.497Z"}
+{"level":"info","message":"📧 Email: Configured","timestamp":"2025-08-08T17:01:54.497Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [08/Aug/2025:17:01:54 +0000] \"GET /api/health HTTP/1.1\" 200 99 \"-\" \"Mozilla/5.0 (Windows NT; Windows NT 10.0; nb-NO) WindowsPowerShell/5.1.19041.5965\"","timestamp":"2025-08-08T17:01:54.975Z"}

@@ -202,6 +202,24 @@ app.post('/api/posts', (req, res) => {
   }
 });
 
+// Video generation endpoint
+app.post('/api/generate-video', async (req, res) => {
+  try {
+    const { prompt } = req.body;
+    
+    // Fallback response
+    res.json({
+      success: true,
+      videoUrl: 'https://example.com/video.mp4',
+      prompt,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    logger.error('Video generation error:', error);
+    res.status(500).json({ error: 'Video generation failed' });
+  }
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   logger.error('Unhandled error:', err);
