@@ -1,0 +1,5 @@
+[queue]
+- Build Profile Page
+- Build Library Page
+- Connect dummy Social APIs
+- Improve generator UI

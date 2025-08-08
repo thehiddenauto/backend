@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencore Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: #22c55e; }
+        .error { background: #ef4444; }
+        .warning { background: #f59e0b; }
+        .test-button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Influencore - App Status Test</h1>
+    
+    <div id="status-container">
+        <div class="status warning">Testing app status...</div>
+    </div>
+    
+    <h2>Quick Tests</h2>
+    <button class="test-button" onclick="testFrontend()">Test Frontend</button>
+    <button class="test-button" onclick="testBackend()">Test Backend</button>
+    <button class="test-button" onclick="testAI()">Test AI Generation</button>
+    
+    <div id="results"></div>
+
+    <script>
+        async function testFrontend() {
+            try {
+                const response = await fetch('http://localhost:5173');
+                if (response.ok) {
+                    showResult('✅ Frontend is running at http://localhost:5173', 'success');
+                } else {
+                    showResult('❌ Frontend not responding', 'error');
+                }
+            } catch (error) {
+                showResult('❌ Frontend error: ' + error.message, 'error');
+            }
+        }
+
+        async function testBackend() {
+            try {
+                const response = await fetch('http://localhost:3000/api/health');
+                if (response.ok) {
+                    const data = await response.json();
+                    showResult('✅ Backend is running: ' + JSON.stringify(data), 'success');
+                } else {
+                    showResult('❌ Backend not responding', 'error');
+                }
+            } catch (error) {
+                showResult('❌ Backend error: ' + error.message, 'error');
+            }
+        }
+
+        async function testAI() {
+            try {
+                const response = await fetch('http://localhost:3000/api/generate-text', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        brand: 'Test Brand',
+                        product: 'Test Product',
+                        audience: 'Test Audience',
+                        platform: 'TikTok',
+                        tone: 'Bold and Energetic'
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    showResult('✅ AI Generation working: ' + (data.note || 'AI response received'), 'success');
+                } else {
+                    showResult('❌ AI Generation failed', 'error');
+                }
+            } catch (error) {
+                showResult('❌ AI Generation error: ' + error.message, 'error');
+            }
+        }
+
+        function showResult(message, type) {
+            const resultsDiv = document.getElementById('results');
+            const div = document.createElement('div');
+            div.className = 'status ' + type;
+            div.textContent = message;
+            resultsDiv.appendChild(div);
+        }
+
+        // Auto-test on load
+        window.onload = function() {
+            setTimeout(() => {
+                testFrontend();
+                setTimeout(() => testBackend(), 1000);
+                setTimeout(() => testAI(), 2000);
+            }, 1000);
+        };
+    </script>
+</body>
+</html> 
