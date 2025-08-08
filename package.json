@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "backend": "node backend/index.js",
-    "start": "concurrently \"npm run backend\" \"npm run dev\"",
+    "start": "node index.js",
     "deploy": "node scripts/deploy.js",
     "deploy:backend": "node scripts/deploy-backend.js",
     "test": "vitest",
