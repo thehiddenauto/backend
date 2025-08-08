@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import { apiClient, API_ENDPOINTS } from '../config/api.js';
 
 export default function Generator() {
   const [messages, setMessages] = useState([]);
@@ -59,7 +59,7 @@ export default function Generator() {
       };
       localStorage.setItem('userSession', JSON.stringify(mockUser));
 
-      const response = await axios.post(`/api/generate-text`, {
+      const response = await apiClient.post(API_ENDPOINTS.GENERATE_TEXT, {
         message: userMessage,
         mode: selectedMode
       });

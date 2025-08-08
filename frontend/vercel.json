@@ -13,15 +13,21 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "https://api.influencore.co/api/$1"
+      "dest": "https://influencore-backend.onrender.com/api/$1"
     },
     {
       "src": "/(.*)",
       "dest": "/index.html"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "env": {
-    "VITE_API_URL": "https://api.influencore.co"
+    "VITE_API_URL": "https://influencore-backend.onrender.com"
   },
   "functions": {
     "api/**/*.js": {
