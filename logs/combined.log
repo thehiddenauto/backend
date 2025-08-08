@@ -58,3 +58,5 @@
 {"level":"info","message":"💳 Stripe: Configured","timestamp":"2025-08-08T17:01:54.497Z"}
 {"level":"info","message":"📧 Email: Configured","timestamp":"2025-08-08T17:01:54.497Z"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [08/Aug/2025:17:01:54 +0000] \"GET /api/health HTTP/1.1\" 200 99 \"-\" \"Mozilla/5.0 (Windows NT; Windows NT 10.0; nb-NO) WindowsPowerShell/5.1.19041.5965\"","timestamp":"2025-08-08T17:01:54.975Z"}
+{"level":"info","message":"::1 - - [08/Aug/2025:18:57:06 +0000] \"GET /api/health HTTP/1.1\" 200 99 \"-\" \"Mozilla/5.0 (Windows NT; Windows NT 10.0; nb-NO) WindowsPowerShell/5.1.19041.5965\"","timestamp":"2025-08-08T18:57:06.643Z"}
+{"level":"info","message":"::1 - - [08/Aug/2025:19:07:18 +0000] \"GET /api/health HTTP/1.1\" 200 99 \"-\" \"Mozilla/5.0 (Windows NT; Windows NT 10.0; nb-NO) WindowsPowerShell/5.1.19041.5965\"","timestamp":"2025-08-08T19:07:18.638Z"}

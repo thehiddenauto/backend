@@ -1,0 +1,6 @@
+{"level":"info","message":"🚀 Influencore server running on port 3001","timestamp":"2025-08-08T19:16:38.862Z"}
+{"level":"info","message":"📊 Environment: production","timestamp":"2025-08-08T19:16:38.864Z"}
+{"level":"info","message":"🔗 Frontend URL: http://localhost:5173","timestamp":"2025-08-08T19:16:38.864Z"}
+{"level":"info","message":"💳 Stripe: Not configured","timestamp":"2025-08-08T19:16:38.864Z"}
+{"level":"info","message":"📧 Email: Not configured","timestamp":"2025-08-08T19:16:38.864Z"}
+{"level":"info","message":"::1 - - [08/Aug/2025:19:16:40 +0000] \"GET /api/health HTTP/1.1\" 200 99 \"-\" \"Mozilla/5.0 (Windows NT; Windows NT 10.0; nb-NO) WindowsPowerShell/5.1.19041.5965\"","timestamp":"2025-08-08T19:16:40.077Z"}
